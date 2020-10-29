@@ -8,11 +8,16 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body> 
-    <!--High Scores button. Probably need to convert to a button or "a ref".-->
-    <div class ="ShowHighScores"></div>
+    <!--Header that contains the High Scores button and timer.-->
+    <div class ="header">
+        <!--High Scores button. Probably need to convert to a button or "a ref".-->
+        <button> Check Highscores</button>
+        <!--Need to link to "HighScores screen-->
 
-    <!--Time left in the game-->
-    <div class ="Timer"></div>
+        <!--Time left in the game-->
+        <div class ="Timer">Time</div>
+        <!--Need to create the timer-->
+    </div>
     
     <!--Quiz rules that will be seen at the start of the game.-->
     <div class ="QuizRules">
@@ -24,7 +29,7 @@
     <button> Start Quiz</button>
 
     <!--Where my questions and options will be displayed-->
-    <div class ="Questions">
+    <div class ="Questions" style="display: none;">
         <div class ="QuestionBox">
             <dvi class ="fourAnswers"></dvi>
         </div>
@@ -32,7 +37,7 @@
     </div>
 
     <!--Finished Screen-->
-    <div class ="QuizOver">
+    <div class ="QuizOver" style="display: none;">
         <h1> You're done!</h1>
         <h3> Your score was </h3>
         <form> Enter initials</form>
@@ -40,7 +45,7 @@
         <div class ="divider"></div>
     </div>
 
-    <div class ="HighScores">
+    <div class ="HighScores" style="display: none;">
         <ul>
             Top score
         </ul>

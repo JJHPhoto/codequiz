@@ -1,3 +1,26 @@
+/* Page stlye */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: brown;
+    display: flex;
+    padding: 2em;
+}
+
+.Timer {
+    border: solid black .3em;
+    background-color: white;
+    color: brown;
+    /* display: flex;
+    justify-content: flex-end; */
+}
+
+/* Need to add some style to the "header" box */
+
 /* Need to add "active" style to Start Quiz btn. */
 
-/*There needs to be a "cursor state" when I move over buttons. 
+/* There needs to be a "cursor state" when I move over buttons. */
