@@ -5,12 +5,14 @@
     margin: 0;
 }
 
+/* Header box style */
 .header {
     background-color: brown;
     display: flex;
     padding: 2em;
 }
 
+/* Timer box style */
 .Timer {
     border: solid black .3em;
     background-color: white;
@@ -19,7 +21,20 @@
     justify-content: flex-end; */
 }
 
-/* Need to add some style to the "header" box */
+/* Quiz Rules style */
+.QuizRules {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+/* My button styles */
+.button {
+    background-color: black;
+    color: white;
+}
+/* Not working */
 
 /* Need to add "active" style to Start Quiz btn. */
 
