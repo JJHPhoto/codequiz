@@ -7,9 +7,48 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
-    
+<body> 
+    <!--High Scores button. Probably need to convert to a button or "a ref".-->
+    <div class ="ShowHighScores"></div>
 
+    <!--Time left in the game-->
+    <div class ="Timer"></div>
+    
+    <!--Quiz rules that will be seen at the start of the game.-->
+    <div class ="QuizRules">
+        <h2>Here's how it works</h2>
+        <p> You will be given a multiple choice question. Answer correctly and your score goes up. Answer incorrectly and you lose 10 seconds off the timer. At the end, you'll see your final score and be given a chance to try again, reset the high scores or just leave it as is.</p>
+    </div>
+
+    <!--Button to start quiz-->
+    <button> Start Quiz</button>
+
+    <!--Where my questions and options will be displayed-->
+    <div class ="Questions">
+        <div class ="QuestionBox">
+            <dvi class ="fourAnswers"></dvi>
+        </div>
+        <div class ="divider"></div>
+    </div>
+
+    <!--Finished Screen-->
+    <div class ="QuizOver">
+        <h1> You're done!</h1>
+        <h3> Your score was </h3>
+        <form> Enter initials</form>
+        <button>Submit</button>
+        <div class ="divider"></div>
+    </div>
+
+    <div class ="HighScores">
+        <ul>
+            Top score
+        </ul>
+        <button>Go Back</button>
+        <button>Clear High Scores</button>
+    </div>
+
+    <!--Link to my JavaScript-->
     <script src = "assets/js/script.js"></script>
 </body>
 </html>
