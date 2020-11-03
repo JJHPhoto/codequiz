@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Quiz</title>
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -27,23 +27,24 @@
     <p> You will be given a multiple choice question. Answer correctly and your score goes up. Answer incorrectly and
       you lose 10 seconds off the timer. At the end, you'll see your final score and be given a chance to try again,
       reset the high scores or just leave it as is.</p>
-    <button id="Start"> Start Quiz</button>
+    <button onclick="startQuiz()"> Start Quiz</button>
   </div>
 
   <!--Where my questions and options will be displayed-->
   <div id="QuestionBox" style="display: none;">
     <h1 id="question-title"></h1>
-    <button id="answer1"></button>
-    <button id="answer2"></button>
-    <button id="answer3"></button>
-    <button id="answer4"></button>
+    <button id="answer1" onclick="submitAnswer(1)"></button>
+    <button id="answer2" onclick="submitAnswer(2)"></button>
+    <button id="answer3" onclick="submitAnswer(3)"></button>
+    <button id="answer4" onclick="submitAnswer(4)"></button>
   </div>
   <div class="divider"></div>
 
   <!--Finished Screen-->
   <div id="QuizOver" style="display: none;">
     <h1> You're done!</h1>
-    <h3> Your score was </h3>
+    <h3>Your score was:</h3>
+    <h3 id="finalScore"></h3>
     <form> Enter initials</form>
     <button id="submitInitials">Submit</button>
     <div class="divider"></div>
