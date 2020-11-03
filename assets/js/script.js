@@ -1,7 +1,8 @@
 // My data
-let time = 5;
+let time = 30;
 let score = 0;
 let currentQuestion = 0;
+let intervalId;
 
 const data = [
   {
@@ -111,13 +112,12 @@ document.getElementById("Timer").innerHTML = time;
 function startQuiz() {
   document.getElementById("QuestionBox").style.display = "block";
   document.getElementById("QuizRules").style.display = "none";
-  const counter = setInterval(function () {
+  intervalId = setInterval(function () {
     time -= 1;
     document.getElementById("Timer").innerHTML = time;
     if (time === 0) {
-      clearInterval(counter);
+      endQuiz();
     }
-    // console.log(time)
   }, 1000);
 }
 
@@ -136,12 +136,17 @@ function nextQuestion() {
 
   if (currentQuestion === data.length) {
     // have we gone past the end?
-    document.getElementById("finalScore").innerHTML = score;
-    document.getElementById("QuizOver").style.display = "block";
-    document.getElementById("QuestionBox").style.display = "none";
+    endQuiz();
   } else {
     writeQuestion();
   }
+}
+
+function endQuiz() {
+  document.getElementById("finalScore").innerHTML = score;
+  document.getElementById("QuizOver").style.display = "block";
+  document.getElementById("QuestionBox").style.display = "none";
+  clearInterval(intervalId);
 }
 
 // Todo
@@ -149,7 +154,6 @@ function nextQuestion() {
 // Timer
 // ======
 // timer ends, end quiz
-// wrong answer subtract 10s
 
 // Score
 // =====
