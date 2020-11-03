@@ -1,11 +1,5 @@
-// My variables
-
-// My psuedocode notes
-
-// Need to build an array of questions that I can cycle through. The will need a question, 4 options with buttons and a correct answer. They then need to show if you're correct. If you're wrong, I need to reduce 10 seconds off the timer. When the user clicks on an aswer, the button should go to an "active" state and then move the user to the next question.
-
-// On the "QuizOver" screen, there needs to be an "active" state when entering initials and when you click the "submit" button.
-let time = 75
+// My data
+let time = 5
 let score = 0
 let currentQuestion = 0
 
@@ -22,74 +16,74 @@ const data = [
 
   // {
   //   title: 'Why is Logan so smart?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 1
   // },
 
   // {
   //   title: 'Why does Nikon suck?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 3
   // },
 
   // {
   //   title: 'Did George Lucas steal the plot of Star Wars from Dune?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 4
   // },
 
   // {
   //   title: 'Is Google really evil?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 2
   // },
 
   // {
   //   title: 'Why do we take selfies?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 1
   // },
 
   // {
   //   title: 'Is Apple a cult?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 3
   // },
 
   // {
   //   title: 'Is Mark Z a human?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 2
   // },
 
   // {
   //   title: 'How much more money does Jeff B need?',
-  // answer1: 'Lenova',
-  // answer2: 'Mac',
-  // answer3: 'Chromebook',
-  // answer4: 'Dell',
-  // correctAnswer: 1
+  //   answer1: 'Lenova',
+  //   answer2: 'Mac',
+  //   answer3: 'Chromebook',
+  //   answer4: 'Dell',
+  //   correctAnswer: 4
   // },
 
   {
@@ -112,9 +106,19 @@ function writeQuestion () {
 
 writeQuestion()
 
+document.getElementById('Timer').innerHTML = time
+
 function startQuiz () {
   document.getElementById('QuestionBox').style.display = 'block'
   document.getElementById('QuizRules').style.display = 'none'
+  const counter = setInterval(function () {
+    time -= 1
+    document.getElementById('Timer').innerHTML = time
+    if (time === 0) {
+      clearInterval(counter)
+    }
+    // console.log(time)
+  }, 1000)
 }
 
 function submitAnswer (answer) {
@@ -140,9 +144,6 @@ function nextQuestion () {
 }
 
 // Todo
-
-// add options
-// check answer on answer submit
 
 // Timer
 // ======
