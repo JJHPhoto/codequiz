@@ -16,16 +16,40 @@ const data = [
 
   },
 
-  {
-    title: 'Why is Logan so smart?'
-  },
+  // {
+  //   title: 'Why is Logan so smart?'
+  // },
+
+  // {
+  //   title: 'Why does Nikon suck?'
+  // },
+
+  // {
+  //   title: 'Did George Lucas steal the plot of Star Wars from Dune?'
+  // },
+
+  // {
+  //   title: 'Is Google really evil?'
+  // },
+
+  // {
+  //   title: 'Why do we take selfies?'
+  // },
+
+  // {
+  //   title: 'Is Apple a cult?'
+  // },
+
+  // {
+  //   title: 'Is Mark Z a human?'
+  // },
+
+  // {
+  //   title: 'How much more money does Jeff B need?'
+  // },
 
   {
-    title: 'Why does Nikon suck?'
-  },
-
-  {
-    title: 'Did George Lucas steal the plot of Star Wars from Dune?'
+    title: 'Are we in the Matrix?'
   }
 ]
 
@@ -34,7 +58,11 @@ titleElement.innerHTML = data[currentQuestion].title
 
 document.getElementById('submit').addEventListener('click', function () {
   currentQuestion += 1
-  document.getElementById('question-title').innerHTML = data[currentQuestion].title
-})
 
-console.log()
+  if (currentQuestion === data.length) { // have we gone past the end?
+    document.getElementById('QuizOver').style.display = 'block'
+    document.getElementById('QuestionBox').style.display = 'none'
+  } else {
+    document.getElementById('question-title').innerHTML = data[currentQuestion].title
+  }
+})
