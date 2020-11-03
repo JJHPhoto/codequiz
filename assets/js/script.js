@@ -102,11 +102,15 @@ const data = [
   }
 ]
 
-document.getElementById('question-title').innerHTML = data[currentQuestion].title
-document.getElementById('answer1').innerHTML = data[currentQuestion].answer1
-document.getElementById('answer2').innerHTML = data[currentQuestion].answer2
-document.getElementById('answer3').innerHTML = data[currentQuestion].answer3
-document.getElementById('answer4').innerHTML = data[currentQuestion].answer4
+function writeQuestion () {
+  document.getElementById('question-title').innerHTML = data[currentQuestion].title
+  document.getElementById('answer1').innerHTML = data[currentQuestion].answer1
+  document.getElementById('answer2').innerHTML = data[currentQuestion].answer2
+  document.getElementById('answer3').innerHTML = data[currentQuestion].answer3
+  document.getElementById('answer4').innerHTML = data[currentQuestion].answer4
+}
+
+writeQuestion()
 
 function startQuiz () {
   document.getElementById('QuestionBox').style.display = 'block'
@@ -131,11 +135,7 @@ function nextQuestion () {
     document.getElementById('QuizOver').style.display = 'block'
     document.getElementById('QuestionBox').style.display = 'none'
   } else {
-    document.getElementById('question-title').innerHTML = data[currentQuestion].title
-    document.getElementById('answer1').innerHTML = data[currentQuestion].answer1
-    document.getElementById('answer2').innerHTML = data[currentQuestion].answer2
-    document.getElementById('answer3').innerHTML = data[currentQuestion].answer3
-    document.getElementById('answer4').innerHTML = data[currentQuestion].answer4
+    writeQuestion()
   }
 }
 
