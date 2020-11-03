@@ -22,25 +22,23 @@
   </div>
 
   <!--Quiz rules that will be seen at the start of the game.-->
-  <div class="QuizRules">
+  <div id="QuizRules">
     <h2>Here's how it works</h2>
     <p> You will be given a multiple choice question. Answer correctly and your score goes up. Answer incorrectly and
       you lose 10 seconds off the timer. At the end, you'll see your final score and be given a chance to try again,
       reset the high scores or just leave it as is.</p>
+    <button id="Start"> Start Quiz</button>
   </div>
-
-  <!--Button to start quiz-->
-  <button name="Start"> Start Quiz</button>
 
   <!--Where my questions and options will be displayed-->
-  <!-- <div class ="Questions" style="display: none;"> -->
-  <div id="QuestionBox">
+  <div id="QuestionBox" style="display: none;">
     <h1 id="question-title"></h1>
-    <button id="submit">Answer</button>
-    <!-- <div class ="fourAnswers"></div> -->
+    <button id="answer1"></button>
+    <button id="answer2"></button>
+    <button id="answer3"></button>
+    <button id="answer4"></button>
   </div>
   <div class="divider"></div>
-  <!-- </div> -->
 
   <!--Finished Screen-->
   <div id="QuizOver" style="display: none;">

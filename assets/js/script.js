@@ -11,52 +11,105 @@ let currentQuestion = 0
 const data = [
   {
     title: 'What computer did Steve Jobs make?',
-    options: ['Lenova', 'Mac', 'Chromebook', 'Dell'],
-    answer: 1
+    answer1: 'Lenova',
+    answer2: 'Mac',
+    answer3: 'Chromebook',
+    answer4: 'Dell',
+    correctAnswer: 1
 
   },
 
   // {
-  //   title: 'Why is Logan so smart?'
+  //   title: 'Why is Logan so smart?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'Why does Nikon suck?'
+  //   title: 'Why does Nikon suck?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'Did George Lucas steal the plot of Star Wars from Dune?'
+  //   title: 'Did George Lucas steal the plot of Star Wars from Dune?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'Is Google really evil?'
+  //   title: 'Is Google really evil?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'Why do we take selfies?'
+  //   title: 'Why do we take selfies?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'Is Apple a cult?'
+  //   title: 'Is Apple a cult?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'Is Mark Z a human?'
+  //   title: 'Is Mark Z a human?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   // {
-  //   title: 'How much more money does Jeff B need?'
+  //   title: 'How much more money does Jeff B need?',
+  // answer1: 'Lenova',
+  // answer2: 'Mac',
+  // answer3: 'Chromebook',
+  // answer4: 'Dell',
+  // correctAnswer: 1
   // },
 
   {
-    title: 'Are we in the Matrix?'
+    title: 'Are we in the Matrix?',
+    answer1: 'Lenova',
+    answer2: 'Mac',
+    answer3: 'Chromebook',
+    answer4: 'Dell',
+    correctAnswer: 1
   }
 ]
 
-const titleElement = document.getElementById('question-title')
-titleElement.innerHTML = data[currentQuestion].title
+document.getElementById('question-title').innerHTML = data[currentQuestion].title
+document.getElementById('answer1').innerHTML = data[currentQuestion].answer1
 
-document.getElementById('submit').addEventListener('click', function () {
+function startQuiz () {
+  document.getElementById('QuestionBox').style.display = 'block'
+  document.getElementById('QuizRules').style.display = 'none'
+}
+
+function nextQuestion () {
   currentQuestion += 1
 
   if (currentQuestion === data.length) { // have we gone past the end?
@@ -65,4 +118,27 @@ document.getElementById('submit').addEventListener('click', function () {
   } else {
     document.getElementById('question-title').innerHTML = data[currentQuestion].title
   }
-})
+}
+
+document.getElementById('Start').addEventListener('click', startQuiz)
+
+document.getElementById('submit').addEventListener('click', nextQuestion)
+
+// Todo
+
+// add options
+// check answer on answer submit
+
+// Timer
+// ======
+// timer ends, end quiz
+// wrong answer subtract 10s
+
+// Score
+// =====
+// load previous scores from local storage
+// calculate score
+// submit initials
+// save score + initials
+// reset quiz
+// clear scores
