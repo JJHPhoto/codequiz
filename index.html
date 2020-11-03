@@ -1,62 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body> 
-    <!--Header that contains the High Scores button and timer.-->
-    <div class ="header">
-        <!--High Scores button. Probably need to convert to a button or "a ref".-->
-        <button name="Highscores"> Check Highscores</button>
-        <!--Need to link to "HighScores screen-->
 
-        <!--Time left in the game-->
-        <div class ="Timer">Time</div>
-        <!--Need to create the timer-->
-    </div>
-    
-    <!--Quiz rules that will be seen at the start of the game.-->
-    <div class ="QuizRules">
-        <h2>Here's how it works</h2>
-        <p> You will be given a multiple choice question. Answer correctly and your score goes up. Answer incorrectly and you lose 10 seconds off the timer. At the end, you'll see your final score and be given a chance to try again, reset the high scores or just leave it as is.</p>
-    </div>
+<body>
+  <!--Header that contains the High Scores button and timer.-->
+  <div class="header">
+    <!--High Scores button. Probably need to convert to a button or "a ref".-->
+    <button name="Highscores"> Check Highscores</button>
+    <!--Need to link to "HighScores screen-->
 
-    <!--Button to start quiz-->
-    <button name="Start"> Start Quiz</button>
+    <!--Time left in the game-->
+    <div class="Timer">Time</div>
+    <!--Need to create the timer-->
+  </div>
 
-    <!--Where my questions and options will be displayed-->
-    <!-- <div class ="Questions" style="display: none;"> -->
-        <div class ="QuestionBox">
-            <h1 id="question-title">Test</h1>
-            <!-- <div class ="fourAnswers"></div> -->
-        </div>
-        <div class ="divider"></div>
-    <!-- </div> -->
+  <!--Quiz rules that will be seen at the start of the game.-->
+  <div class="QuizRules">
+    <h2>Here's how it works</h2>
+    <p> You will be given a multiple choice question. Answer correctly and your score goes up. Answer incorrectly and
+      you lose 10 seconds off the timer. At the end, you'll see your final score and be given a chance to try again,
+      reset the high scores or just leave it as is.</p>
+  </div>
 
-    <!--Finished Screen-->
-    <div class ="QuizOver" style="display: none;">
-        <h1> You're done!</h1>
-        <h3> Your score was </h3>
-        <form> Enter initials</form>
-        <button name="Submit">Submit</button>
-        <div class ="divider"></div>
-    </div>
+  <!--Button to start quiz-->
+  <button name="Start"> Start Quiz</button>
 
-    <div class ="HighScores" style="display: none;">
-        <ul>
-            Top score
-        </ul>
-        <button name="Back">Go Back</button>
-        <button name="Clear">Clear High Scores</button>
-    </div>
+  <!--Where my questions and options will be displayed-->
+  <!-- <div class ="Questions" style="display: none;"> -->
+  <div class="QuestionBox">
+    <h1 id="question-title"></h1>
+    <button id="submit">Answer</button>
+    <!-- <div class ="fourAnswers"></div> -->
+  </div>
+  <div class="divider"></div>
+  <!-- </div> -->
 
-    <!--Link to my JavaScript-->
-    <script src = "assets/js/script.js"></script>
+  <!--Finished Screen-->
+  <div class="QuizOver" style="display: none;">
+    <h1> You're done!</h1>
+    <h3> Your score was </h3>
+    <form> Enter initials</form>
+    <button id="submitInitials">Submit</button>
+    <div class="divider"></div>
+  </div>
+
+  <div class="HighScores" style="display: none;">
+    <ul>
+      Top score
+    </ul>
+    <button id="back">Go Back</button>
+    <button id="clear">Clear High Scores</button>
+  </div>
+
+  <!--Link to my JavaScript-->
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
-
-

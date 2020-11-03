@@ -6,20 +6,35 @@
 
 // On the "QuizOver" screen, there needs to be an "active" state when entering initials and when you click the "submit" button.
 
-const titleElement = document.getElementById('question-title')
-titleElement.innerHTML = ''
+let currentQuestion = 0
 
-let data = [
+const data = [
   {
-    question: 'What computer did Steve Jobs make?',
+    title: 'What computer did Steve Jobs make?',
     options: ['Lenova', 'Mac', 'Chromebook', 'Dell'],
     answer: 1
 
   },
 
   {
-    question: ''
+    title: 'Why is Logan so smart?'
+  },
+
+  {
+    title: 'Why does Nikon suck?'
+  },
+
+  {
+    title: 'Did George Lucas steal the plot of Star Wars from Dune?'
   }
 ]
+
+const titleElement = document.getElementById('question-title')
+titleElement.innerHTML = data[currentQuestion].title
+
+document.getElementById('submit').addEventListener('click', function () {
+  currentQuestion += 1
+  document.getElementById('question-title').innerHTML = data[currentQuestion].title
+})
 
 console.log()
