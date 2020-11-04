@@ -18,3 +18,5 @@ Next I worked on being able to submit the user's initials and store their scores
 
 W3Schools
 Stackflow
+
+### Screenshot of working application

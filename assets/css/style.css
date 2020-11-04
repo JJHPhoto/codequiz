@@ -1,8 +1,8 @@
-/* Page stlye */
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+/* Page and elements stlye */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -13,37 +13,54 @@ div {
   margin: 1em;
 }
 
-/* Header box style */
-.header {
-    background-color: brown;
-    display: flex;
-    padding: 2em;
-}
-
-/* Timer box style */
-.Timer {
-    border: solid black .3em;
-    background-color: white;
-    color: brown;
-    /* display: flex;
-    justify-content: flex-end; */
-}
-
-/* Quiz Rules style */
-.QuizRules {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-}
-
 /* My button styles */
 .button {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 /* Not working */
 
-/* Need to add "active" style to Start Quiz btn. */
+/* Header box style */
+.header {
+  background-color: brown;
+  display: flex;
+  padding: 2em;
+}
 
-/* There needs to be a "cursor state" when I move over buttons. */
+/* Timer box style */
+#Timer {
+  border: solid black 0.3em;
+  background-color: white;
+  color: brown;
+  /* display: flex;
+    justify-content: flex-end; */
+}
+
+/* Quiz rules box style */
+#QuizRules {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Question box stle */
+#QuestionBox {
+  border: solid red 0.3em;
+  background-color: grey;
+  color: black;
+}
+
+/* Quiz over style */
+#QuizOver {
+  border: solid red 0.3em;
+  background-color: grey;
+  color: black;
+}
+
+/* High score styles */
+#HighScores {
+  border: solid red 0.3em;
+  background-color: grey;
+  color: black;
+}

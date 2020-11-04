@@ -4,6 +4,7 @@ let score = 0;
 let currentQuestion = 0;
 let intervalId;
 
+// My questions in an object array.
 const data = [
   {
     title: "What computer did Steve Jobs make?",
@@ -96,6 +97,7 @@ const data = [
   },
 ];
 
+// My function that writes my questions for me in my "QuestionBox" div.
 function writeQuestion() {
   document.getElementById("question-title").innerHTML =
     data[currentQuestion].title;
@@ -107,8 +109,10 @@ function writeQuestion() {
 
 writeQuestion();
 
+//My timer.
 document.getElementById("Timer").innerHTML = time;
 
+// My function that starts my quiz questions and my the timer's countdown.
 function startQuiz() {
   document.getElementById("QuestionBox").style.display = "block";
   document.getElementById("QuizRules").style.display = "none";
@@ -121,6 +125,7 @@ function startQuiz() {
   }, 1000);
 }
 
+// My function that checks if the answer is correct. If correct, 10 points get added to the score. If incorrect, the user loses 10 seconds.
 function submitAnswer(answer) {
   if (answer === data[currentQuestion].correctAnswer) {
     score += 10;
@@ -131,9 +136,9 @@ function submitAnswer(answer) {
   nextQuestion();
 }
 
+//My function that gets called after an answer is submitted.
 function nextQuestion() {
   currentQuestion += 1;
-
   if (currentQuestion === data.length) {
     endQuiz();
   } else {
@@ -141,6 +146,7 @@ function nextQuestion() {
   }
 }
 
+//My function that ends the game and brings up the input for the user's initials to be submitted.
 function endQuiz() {
   document.getElementById("finalScore").innerHTML = score;
   document.getElementById("QuizOver").style.display = "block";
@@ -148,6 +154,7 @@ function endQuiz() {
   clearInterval(intervalId);
 }
 
+//My function that will save my scores to local storage to then be shown on my High Scores screen.
 function submitScore() {
   const initials = document.getElementById("initials").value;
   localStorage.setItem("Entries", initials.value);
