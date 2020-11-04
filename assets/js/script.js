@@ -156,18 +156,27 @@ function endQuiz() {
 
 //My function that will save my scores to local storage to then be shown on my High Scores screen.
 function submitScore() {
+  const userInitials = document.getElementById("initials").value;
+  console.log(userInitials);
+
+  //Combining my initials input and score.
+  let entry = {
+    userInitials,
+    score,
+  };
+  console.log(entry);
+
+  //Saving to localStorage.
+  // localStorage.setItem("UserScore", entry);
+  // let entry = JSON.parse(localStorage.getItem("entries"));
+  // entries.push(JSON.stringify({ initials: initials, score: score }));
+  // let savedScores = localStorage.getItem(entries);
+
+  // let savedScores = JSON.parse(localStorage.getItem("UserScore"));
+  // console.log(savedScores);
+
   document.getElementById("HighScores").style.display = "block";
   document.getElementById("QuizOver").style.display = "none";
-
-  const initials = document.getElementById("initials").value;
-
-  localStorage.setItem("entries", initials.value);
-
-  let entries = JSON.parse(localStorage.getItem("entries"));
-
-  entries.push(JSON.stringify({ initials: initials, score: score }));
-
-  localStorage.setItem(entries);
 }
 
 function clearScores() {
