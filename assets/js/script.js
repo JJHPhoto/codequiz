@@ -156,17 +156,34 @@ function endQuiz() {
 
 //My function that will save my scores to local storage to then be shown on my High Scores screen.
 function submitScore() {
-  const userInitials = document.getElementById("initials").value;
-  console.log(userInitials);
+  //Converts the initials a user inputs into a const.
+  const userInput = document.getElementById("initials").value;
+  console.log(userInput);
 
   //Combining my initials input and score.
-  let entry = {
-    userInitials,
-    score,
-  };
+  let entry = { userInput: userInput, score: score };
   console.log(entry);
 
   //Saving to localStorage.
+  localStorage.setItem("entry", JSON.stringify(entry));
+
+  //Change screen to "HighScores" screen
+  document.getElementById("HighScores").style.display = "block";
+  document.getElementById("QuizOver").style.display = "none";
+
+  //Get the entry to "HighScores" screen.
+  // JSON.parse(localStorage.getItem("entry"));
+
+  // localStorage.setItem("savedScore", entry.value);
+  // let savedScore = JSON.stringify({
+  //   userInitials: userInput,
+  //   finalScore: score,
+  // });
+
+  // JSON.parse(localStorage.getItem("savedScore"));
+  // savedScore.push(
+  //   JSON.stringify({ userInitials: userInput, finalScore: score })
+  // );
   // localStorage.setItem("UserScore", entry);
   // let entry = JSON.parse(localStorage.getItem("entries"));
   // entries.push(JSON.stringify({ initials: initials, score: score }));
@@ -174,9 +191,6 @@ function submitScore() {
 
   // let savedScores = JSON.parse(localStorage.getItem("UserScore"));
   // console.log(savedScores);
-
-  document.getElementById("HighScores").style.display = "block";
-  document.getElementById("QuizOver").style.display = "none";
 }
 
 function clearScores() {
