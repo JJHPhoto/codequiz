@@ -1,5 +1,5 @@
 // My data
-let time = 3;
+let time = 5;
 let score = 0;
 let currentQuestion = 0;
 let intervalId;
