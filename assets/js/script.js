@@ -1,5 +1,5 @@
 // My data
-let time = 30;
+let time = 3;
 let score = 0;
 let currentQuestion = 0;
 let intervalId;
@@ -135,7 +135,6 @@ function nextQuestion() {
   currentQuestion += 1;
 
   if (currentQuestion === data.length) {
-    // have we gone past the end?
     endQuiz();
   } else {
     writeQuestion();
@@ -149,17 +148,21 @@ function endQuiz() {
   clearInterval(intervalId);
 }
 
-// Todo
+function submitScore() {
+  const initials = document.getElementById("initials").value;
+  localStorage.setItem("Entries", initials.value);
+}
 
-// Timer
-// ======
-// timer ends, end quiz
+// Todo
 
 // Score
 // =====
 // load previous scores from local storage
-// calculate score
-// submit initials
+// submitScore :
+// let entries = JSON.parse(localStorage.getItem('entries'))
+// entries.push(JSON.stringify({initials: initials, score: score}))
+// localStorage.setItem(entries)
+
 // save score + initials
 // reset quiz
 // clear scores

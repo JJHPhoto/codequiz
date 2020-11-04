@@ -40,16 +40,15 @@
       <button id="answer3" onclick="submitAnswer(3)"></button>
       <button id="answer4" onclick="submitAnswer(4)"></button>
     </div>
-    <div class="divider"></div>
 
     <!--Finished Screen-->
     <div id="QuizOver" style="display: none">
       <h1>You're done!</h1>
       <h3>Your score was:</h3>
       <h3 id="finalScore"></h3>
-      <form>Enter initials</form>
-      <button id="submitInitials">Submit</button>
-      <div class="divider"></div>
+      <label for="initials">Initials</label>
+      <input type="text" id="initials" name="initials" />
+      <button type="submit" onclick="submitScore()">Submit</button>
     </div>
 
     <div id="HighScores" style="display: none">
