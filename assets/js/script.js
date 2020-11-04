@@ -158,14 +158,28 @@ function endQuiz() {
 function submitScore() {
   document.getElementById("HighScores").style.display = "block";
   document.getElementById("QuizOver").style.display = "none";
-  // const initials = document.getElementById("initials").value;
-  // localStorage.setItem("entries", initials.value);
-  // let entries = JSON.parse(localStorage.getItem("entries"));
-  // entries.push(JSON.stringify({ initials: initials, score: score }));
-  // localStorage.setItem(entries);
+
+  const initials = document.getElementById("initials").value;
+
+  localStorage.setItem("entries", initials.value);
+
+  let entries = JSON.parse(localStorage.getItem("entries"));
+
+  entries.push(JSON.stringify({ initials: initials, score: score }));
+
+  localStorage.setItem(entries);
 }
 
-function clearScores() {}
+function clearScores() {
+  //Need to be able to clear localStorage of all "entries" in screen. Don't want to reload.
+}
+
+function showScores() {
+  document.getElementById("HighScores").style.display = "block";
+  document.getElementById("QuizRules").style.display = "none";
+  //for my starting screen that lets me see my high scores. If there are none stored in localStorage, it should be blank.
+  //Blank part working.
+}
 
 // Todo
 
