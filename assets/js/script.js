@@ -3,10 +3,6 @@ let time = 5;
 let score = 0;
 let currentQuestion = 0;
 let intervalId;
-//Trying something - and now not.
-// const form = document.querySelector("form");
-// const ul = document.querySelector("ul");
-// const clearbutton = document.getElementById("clear");
 
 // My questions in an object array.
 const data = [
@@ -197,9 +193,9 @@ function loadScores() {
 document.getElementById("userScores").innerHTML = loadScores;
 
 //My function that removes HighScores from screen.
-//Still in localStorage though.
 function clearScores() {
   document.getElementById("userScores").innerHTML = "";
+  localStorage.clear();
 }
 
 function showScores() {
