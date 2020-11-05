@@ -176,18 +176,27 @@ function submitScore() {
   localStorage.setItem("entry", JSON.stringify(entry));
   //Seems to be overwriting, not saving multiple entries.
 
+  // //Get the data out of localStorage.
+  // let savedScores = localStorage.getItem("entry");
+  // JSON.parse(savedScores);
+  // console.log(savedScores);
+
+  // //It seems I now need to stringify the elements. This seems stupid.
+  // document.getElementById("userScores").innerHTML = savedScores;
+}
+
+//My function that loads the user's scores from local storage.
+function loadScores() {
   //Get the data out of localStorage.
-  // let savedScores = JSON.parse(localStorage.getItem("entry"));
   let savedScores = localStorage.getItem("entry");
   JSON.parse(savedScores);
   console.log(savedScores);
-  // console.log("savedScores:", JSON.parse(savedScores));
-
-  //It seems I now need to stringify the elements. This seems stupid.
-  document.getElementById("userScores").innerHTML = savedScores;
 }
 
-//Removes HighScores from screen.
+//It seems I now need to stringify the elements. This seems stupid.
+document.getElementById("userScores").innerHTML = loadScores;
+
+//My function that removes HighScores from screen.
 //Still in localStorage though.
 function clearScores() {
   document.getElementById("userScores").innerHTML = "";
