@@ -18,7 +18,13 @@ div {
   background-color: black;
   color: white;
 }
-/* Not working */
+
+/* High Scores btn style */
+#HighScores {
+  color: white;
+  background-color: black;
+}
+/* No button styles working */
 
 /* Header box style */
 .header {
@@ -32,8 +38,8 @@ div {
   border: solid black 0.3em;
   background-color: white;
   color: brown;
-  /* display: flex;
-    justify-content: flex-end; */
+  display: flex;
+  /* justify-content: space-between; */
 }
 
 /* Quiz rules box style */
@@ -42,6 +48,11 @@ div {
   flex-wrap: wrap;
   justify-content: center;
   text-align: center;
+  padding: 1em;
+  margin-left: 40em;
+  margin-right: 40em;
+  margin-top: 5em;
+  line-height: 1.25em;
 }
 
 /* Question box stle */
@@ -49,6 +60,15 @@ div {
   border: solid red 0.3em;
   background-color: grey;
   color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+  margin-left: 40em;
+  margin-right: 40em;
+  margin-top: 5em;
+  line-height: 1.25em;
 }
 
 /* Quiz over style */
@@ -56,6 +76,15 @@ div {
   border: solid red 0.3em;
   background-color: grey;
   color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+  margin-left: 40em;
+  margin-right: 40em;
+  margin-top: 5em;
+  line-height: 1.25em;
 }
 
 /* High score styles */
@@ -63,4 +92,13 @@ div {
   border: solid red 0.3em;
   background-color: grey;
   color: black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 1em;
+  margin-left: 40em;
+  margin-right: 40em;
+  margin-top: 5em;
+  line-height: 1.25em;
 }

@@ -3,6 +3,10 @@ let time = 5;
 let score = 0;
 let currentQuestion = 0;
 let intervalId;
+//Trying something - and now not.
+// const form = document.querySelector("form");
+// const ul = document.querySelector("ul");
+// const clearbutton = document.getElementById("clear");
 
 // My questions in an object array.
 const data = [
@@ -156,6 +160,10 @@ function endQuiz() {
 
 //My function that will save my scores to local storage to then be shown on my High Scores screen.
 function submitScore() {
+  //Change screen to "HighScores" screen
+  document.getElementById("HighScores").style.display = "block";
+  document.getElementById("QuizOver").style.display = "none";
+
   //Converts the initials a user inputs into a const.
   const userInput = document.getElementById("initials").value;
   // console.log(userInput);
@@ -168,19 +176,21 @@ function submitScore() {
   localStorage.setItem("entry", JSON.stringify(entry));
   //Seems to be overwriting, not saving multiple entries.
 
-  //Change screen to "HighScores" screen
-  document.getElementById("HighScores").style.display = "block";
-  document.getElementById("QuizOver").style.display = "none";
-
-  //Get the entry to "HighScores" screen.
-  let savedScores = JSON.parse(localStorage.getItem("entry"));
+  //Get the data out of localStorage.
+  // let savedScores = JSON.parse(localStorage.getItem("entry"));
+  let savedScores = localStorage.getItem("entry");
+  JSON.parse(savedScores);
   console.log(savedScores);
+  // console.log("savedScores:", JSON.parse(savedScores));
+
   //It seems I now need to stringify the elements. This seems stupid.
   document.getElementById("userScores").innerHTML = savedScores;
 }
 
+//Removes HighScores from screen.
+//Still in localStorage though.
 function clearScores() {
-  //Need to be able to clear localStorage of all "entries" in screen. Don't want to reload.
+  document.getElementById("userScores").innerHTML = "";
 }
 
 function showScores() {
@@ -194,15 +204,21 @@ function showScores() {
 
 // Score
 // =====
-// load previous scores from local storage
 // JSON.parse the result of getItem
+
+// load previous scores from local storage
+
 // submitScore :
 // save score + initials
+
 // restart quiz
+
 // clear scores
+// localStorage.clear()
 
 // Remember to do
 // ===
+// switch from "entry" to "entries" after I get it working
 // get entries from localStorage using (getItem) and store it in a variable
 // update the variable (adding the new entry)
 // overwrite the old version of entries with your updated version
@@ -210,3 +226,4 @@ function showScores() {
 // Bugs
 // ===
 // my "back" button doesn't clear the "HighScores" div. Also, the buttons no longer work. And the timer is going -0.
+// my "clear" button isn't erasing the localStorage.

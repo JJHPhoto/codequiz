@@ -12,11 +12,13 @@ The next step was figuring out my timer and score. The first step was to get the
 
 As I was working through my JS, it was fun to see repeating code and be able to create functions out of that code that I could use elsewhere. It really felt like things were coming together and finally making some sense. Some.
 
-Next I worked on being able to submit the user's initials and store their scores....
+Next I worked on being able to submit the user's initials and store their scores in local storage. I was able to do this after a few hours of trying to figure out/remember how local storage works, but then I needed to figure out how to get my data out of local storage with JSON.parse.
+
+As I was working in local storage, I was detecting some bugs that I knew I would need to fix. However, I wanted to get to the end of the line to see where that was so that I knew I could get there.
 
 ### Resources
 
-W3Schools
-Stackflow
+[W3Schools](https://www.w3schools.com/)
+["How to use Local Storage with JavaScript" by Tania Rascia](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/)
 
 ### Screenshot of working application
