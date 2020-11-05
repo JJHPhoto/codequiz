@@ -172,25 +172,26 @@ function submitScore() {
   localStorage.setItem("entry", JSON.stringify(entry));
   //Seems to be overwriting, not saving multiple entries.
 
-  // //Get the data out of localStorage.
-  // let savedScores = localStorage.getItem("entry");
-  // JSON.parse(savedScores);
-  // console.log(savedScores);
-
-  // //It seems I now need to stringify the elements. This seems stupid.
-  // document.getElementById("userScores").innerHTML = savedScores;
-}
-
-//My function that loads the user's scores from local storage.
-function loadScores() {
   //Get the data out of localStorage.
   let savedScores = localStorage.getItem("entry");
   JSON.parse(savedScores);
   console.log(savedScores);
+
+  //It seems I now need to stringify the elements. This seems stupid.
+  document.getElementById("userScores").innerHTML = savedScores;
 }
 
-//It seems I now need to stringify the elements. This seems stupid.
-document.getElementById("userScores").innerHTML = loadScores;
+// // My function that loads the user's scores from local storage.
+// function loadScores() {
+//   //Get the data out of localStorage.
+//   let savedScores = localStorage.getItem("entry");
+//   JSON.parse(savedScores);
+//   console.log(savedScores);
+//   return savedScores;
+// }
+
+// //It seems I now need to stringify the elements. This seems stupid.
+// document.getElementById("userScores").innerHTML = loadScores();
 
 //My function that removes HighScores from screen.
 function clearScores() {
@@ -198,11 +199,19 @@ function clearScores() {
   localStorage.clear();
 }
 
+//My attempt to fix my button issue. Failed.
+// function restartQuiz() {
+//   document.getElementById("Timer").innerHTML = time;
+//   document.getElementById("HighScores").style.display = "none";
+//   document.getElementById("QuestionBox").style.display = "block";
+//   writeQuestion;
+// }
+
 function showScores() {
   document.getElementById("HighScores").style.display = "block";
   document.getElementById("QuizRules").style.display = "none";
   //for my starting screen that lets me see my high scores. If there are none stored in localStorage, it should be blank.
-  //Blank part working.
+  //Working from "start quiz" screen but not "highscores" screen.
 }
 
 // Todo
@@ -212,14 +221,8 @@ function showScores() {
 // JSON.parse the result of getItem
 
 // load previous scores from local storage
-
-// submitScore :
-// save score + initials
-
+// Have scores show up on high scores page.
 // restart quiz
-
-// clear scores
-// localStorage.clear()
 
 // Remember to do
 // ===
@@ -230,5 +233,4 @@ function showScores() {
 
 // Bugs
 // ===
-// my "back" button doesn't clear the "HighScores" div. Also, the buttons no longer work. And the timer is going -0.
-// my "clear" button isn't erasing the localStorage.
+// my "back" button doesn't clear the "HighScores" div. Also, the buttons no longer work. And the timer is going -0. And... sometimes the "clear" button just doesn't work if I try to use it a seconnd time.
