@@ -19,6 +19,5 @@ As I was working in local storage, I was detecting some bugs that I knew I would
 ### Resources
 
 [W3Schools](https://www.w3schools.com/)
-["How to use Local Storage with JavaScript" by Tania Rascia](https://www.taniarascia.com/how-to-use-local-storage-with-javascript/)
 
 ### Screenshot of working application
