@@ -170,19 +170,27 @@ function collectScore() {
 
   //Saving to localStorage.
   localStorage.setItem("entry", JSON.stringify(entry));
-  //Seems to be overwriting, not saving multiple entries.
+  //Just overwriting scores.
 }
 
 // My function that loads the user's scores from local storage.
 function loadScore() {
   //Get the data out of localStorage.
   let storedScore = localStorage.getItem("entry");
-  let savedScore = JSON.parse(storedScore); // {userInput: "jj", score: 10}
+  let savedScore = JSON.parse(storedScore);
   let getScore = savedScore.userInput + ": " + savedScore.score;
   document.getElementById("userScores").innerHTML = getScore;
   // console.log(getScore);
 }
 
+function showScores() {
+  document.getElementById("HighScores").style.display = "block";
+  document.getElementById("QuizRules").style.display = "none";
+  loadScore();
+  //for my starting screen that lets me see my high scores. If there are none stored in localStorage, it should be blank.
+  //Working from "start quiz" screen but not "highscores" screen.
+}
+//My function that submits my scores to my HighScore screen.
 function submitScore() {
   collectScore();
   loadScore();
@@ -194,28 +202,18 @@ function clearScores() {
   localStorage.clear();
 }
 
-//My attempt to fix my button issue. Failed.
+//My function to restart quiz.
 // function restartQuiz() {
-//   document.getElementById("Timer").innerHTML = time;
-//   document.getElementById("HighScores").style.display = "none";
-//   document.getElementById("QuestionBox").style.display = "block";
-//   writeQuestion;
+//   writeQuestion();
+//   startQuiz();
 // }
-
-function showScores() {
-  document.getElementById("HighScores").style.display = "block";
-  document.getElementById("QuizRules").style.display = "none";
-  loadScore();
-  //for my starting screen that lets me see my high scores. If there are none stored in localStorage, it should be blank.
-  //Working from "start quiz" screen but not "highscores" screen.
-  //Loading previous score from localStorage, not submitted score.
-}
 
 // Todo
 
 // Score
 // =====
 
+// might be easier to have on separate html
 // load previous scores from local storage
 // restart quiz
 
