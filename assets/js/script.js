@@ -155,7 +155,7 @@ function endQuiz() {
 }
 
 //My function that will save my scores to local storage to then be shown on my High Scores screen.
-function submitScore() {
+function collectScore() {
   //Change screen to "HighScores" screen
   document.getElementById("HighScores").style.display = "block";
   document.getElementById("QuizOver").style.display = "none";
@@ -171,27 +171,22 @@ function submitScore() {
   //Saving to localStorage.
   localStorage.setItem("entry", JSON.stringify(entry));
   //Seems to be overwriting, not saving multiple entries.
-
-  //Get the data out of localStorage.
-  let savedScores = localStorage.getItem("entry");
-  JSON.parse(savedScores);
-  console.log(savedScores);
-
-  //It seems I now need to stringify the elements. This seems stupid.
-  document.getElementById("userScores").innerHTML = savedScores;
 }
 
-// // My function that loads the user's scores from local storage.
-// function loadScores() {
-//   //Get the data out of localStorage.
-//   let savedScores = localStorage.getItem("entry");
-//   JSON.parse(savedScores);
-//   console.log(savedScores);
-//   return savedScores;
-// }
+// My function that loads the user's scores from local storage.
+function loadScore() {
+  //Get the data out of localStorage.
+  let storedScore = localStorage.getItem("entry");
+  let savedScore = JSON.parse(storedScore); // {userInput: "jj", score: 10}
+  let getScore = savedScore.userInput + ": " + savedScore.score;
+  document.getElementById("userScores").innerHTML = getScore;
+  // console.log(getScore);
+}
 
-// //It seems I now need to stringify the elements. This seems stupid.
-// document.getElementById("userScores").innerHTML = loadScores();
+function submitScore() {
+  collectScore();
+  loadScore();
+}
 
 //My function that removes HighScores from screen.
 function clearScores() {
@@ -210,18 +205,18 @@ function clearScores() {
 function showScores() {
   document.getElementById("HighScores").style.display = "block";
   document.getElementById("QuizRules").style.display = "none";
+  loadScore();
   //for my starting screen that lets me see my high scores. If there are none stored in localStorage, it should be blank.
   //Working from "start quiz" screen but not "highscores" screen.
+  //Loading previous score from localStorage, not submitted score.
 }
 
 // Todo
 
 // Score
 // =====
-// JSON.parse the result of getItem
 
 // load previous scores from local storage
-// Have scores show up on high scores page.
 // restart quiz
 
 // Remember to do
