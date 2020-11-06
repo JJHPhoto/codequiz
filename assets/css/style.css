@@ -19,12 +19,41 @@ div {
   color: white;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* High Scores btn style */
-#HighScores {
+#HighScore {
   color: white;
   background-color: black;
+  display: flex;
+  padding: 2em;
+  justify-content: center;
 }
 /* No button styles working */
+
+#buttonsBox {
+  background-color: grey;
+  color: red;
+  display: flex;
+  padding: 2em;
+  justify-content: center;
+}
+
+#retryButton {
+  padding: 1em;
+  background-color: white;
+  color: green;
+  border: black solid 0.5em;
+}
+
+#clearButton {
+  padding: 1em;
+  background-color: red;
+  color: white;
+  border: black solid 0.5em;
+}
 
 /* Header box style */
 .header {
