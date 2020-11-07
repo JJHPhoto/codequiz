@@ -1,5 +1,5 @@
 // My data
-let time = 5;
+let time = 50;
 let score = 0;
 let currentQuestion = 0;
 let intervalId;
@@ -31,77 +31,77 @@ const data = [
     correctAnswer: 2,
   },
 
-  // {
-  //   title: "Why is Logan so smart?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 1,
-  // },
+  {
+    title: "Why is Logan so smart?",
+    answer1: "Josh isn't",
+    answer2: "Deal with the devil",
+    answer3: "Chromebook",
+    answer4: "All of the above",
+    correctAnswer: 1,
+  },
 
-  // {
-  //   title: "Why does Nikon suck?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 3,
-  // },
+  {
+    title: "Why does Nikon suck?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 3,
+  },
 
-  // {
-  //   title: "Did George Lucas steal the plot of Star Wars from Dune?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 4,
-  // },
+  {
+    title: "Did George Lucas steal the plot of Star Wars from Dune?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 4,
+  },
 
-  // {
-  //   title: "Is Google really evil?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 2,
-  // },
+  {
+    title: "Is Google really evil?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 2,
+  },
 
-  // {
-  //   title: "Why do we take selfies?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 1,
-  // },
+  {
+    title: "Why do we take selfies?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 1,
+  },
 
-  // {
-  //   title: "Is Apple a cult?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 3,
-  // },
+  {
+    title: "Is Apple a cult?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 3,
+  },
 
-  // {
-  //   title: "Is Mark Z a human?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 2,
-  // },
+  {
+    title: "Is Mark Z a human?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 2,
+  },
 
-  // {
-  //   title: "How much more money does Jeff B need?",
-  //   answer1: "Lenova",
-  //   answer2: "Mac",
-  //   answer3: "Chromebook",
-  //   answer4: "Dell",
-  //   correctAnswer: 4,
-  // },
+  {
+    title: "How much more money does Jeff B need?",
+    answer1: "Lenova",
+    answer2: "Mac",
+    answer3: "Chromebook",
+    answer4: "Dell",
+    correctAnswer: 4,
+  },
 
   {
     title: "Are we in the Matrix?",
