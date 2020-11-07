@@ -13,10 +13,10 @@
     <!--Header that contains the High Scores button and timer.-->
     <div class="header">
       <!--High Scores button.-->
-      <div id="highScoreButton">
+      <!-- <div id="highScoreButton">
         <a href="highscores.html">High Scores</a>
-      </div>
-      <!-- <button id="Highscores" onclick="showScores()">Check Highscores</button> -->
+      </div> -->
+      <button id="Highscores" onclick="showScores()">Check Highscores</button>
       <!--Need to link to "HighScores screen-->
 
       <!--Time left in the game-->
@@ -32,7 +32,7 @@
         At the end, you'll see your final score and be given a chance to try
         again, reset the high scores or just leave it as is.
       </p>
-      <button onclick="startQuiz()">Start Quiz</button>
+      <button id="start">Start Quiz</button>
     </div>
 
     <!--Where my questions and answers will be displayed-->
@@ -52,7 +52,6 @@
       <label for="initials">Initials</label>
       <input type="text" id="initials" name="initials" />
       <button onclick="submitScore()">Submit</button>
-      <!-- Sort of working. Need to not have all the questions load.-->
     </div>
 
     <!--High Scores Screen-->
@@ -61,7 +60,7 @@
         Top Scores
         <ul id="userScores"></ul>
       </div>
-      <button id="back" onclick="startQuiz()">Go Back</button>
+      <button id="back" onclick="restartQuiz()">Retry Quiz</button>
       <button id="clear" onclick="clearScores()">Clear High Scores</button>
     </div>
 

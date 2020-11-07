@@ -4,6 +4,22 @@ let score = 0;
 let currentQuestion = 0;
 let intervalId;
 
+// Try if I decide to order high scores.
+// var entryCount = localStorage.getItem("entryCount");
+// var topFive = [];
+// var scoreBoard = [];
+
+// if (entryCount == null) {
+//   localStorage.setItem("entryCount", 0);
+//   entryCount = localStorage.getItem("entryCount");
+// } else {
+//   console.log("try", localStorage.length);
+//   for (var i = 0; i < localStorage.length - 1; i++) {
+//     scoreBoard.push(localStorage.getItem(i));
+//   }
+// }
+// console.log(scoreBoard);
+
 // My questions in an object array.
 const data = [
   {
@@ -16,75 +32,75 @@ const data = [
   },
 
   // {
-  //   title: 'Why is Logan so smart?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 1
+  //   title: "Why is Logan so smart?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 1,
   // },
 
   // {
-  //   title: 'Why does Nikon suck?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 3
+  //   title: "Why does Nikon suck?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 3,
   // },
 
   // {
-  //   title: 'Did George Lucas steal the plot of Star Wars from Dune?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 4
+  //   title: "Did George Lucas steal the plot of Star Wars from Dune?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 4,
   // },
 
   // {
-  //   title: 'Is Google really evil?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 2
+  //   title: "Is Google really evil?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 2,
   // },
 
   // {
-  //   title: 'Why do we take selfies?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 1
+  //   title: "Why do we take selfies?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 1,
   // },
 
   // {
-  //   title: 'Is Apple a cult?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 3
+  //   title: "Is Apple a cult?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 3,
   // },
 
   // {
-  //   title: 'Is Mark Z a human?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 2
+  //   title: "Is Mark Z a human?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 2,
   // },
 
   // {
-  //   title: 'How much more money does Jeff B need?',
-  //   answer1: 'Lenova',
-  //   answer2: 'Mac',
-  //   answer3: 'Chromebook',
-  //   answer4: 'Dell',
-  //   correctAnswer: 4
+  //   title: "How much more money does Jeff B need?",
+  //   answer1: "Lenova",
+  //   answer2: "Mac",
+  //   answer3: "Chromebook",
+  //   answer4: "Dell",
+  //   correctAnswer: 4,
   // },
 
   {
@@ -170,7 +186,14 @@ function collectScore() {
 
   //Saving to localStorage.
   localStorage.setItem("entry", JSON.stringify(entry));
-  //Just overwriting scores.
+
+  // Try this to order scores
+  // ===
+  // localStorage.setItem(entryCount, JSON.stringify(entry));
+  // entryCount = parseInt(entryCount) + 1;
+  // console.log(typeof entryCount);
+  // localStorage.setItem("entryCount", entryCount);
+  // //Just overwriting scores.
 }
 
 // My function that loads the user's scores from local storage.
@@ -183,13 +206,14 @@ function loadScore() {
   // console.log(getScore);
 }
 
+// Takes the user to the High Scores screen.
+// If its a first time user, it should be blank. If the user has already scored, there should be an ranked scoreboard.
 function showScores() {
   document.getElementById("HighScores").style.display = "block";
   document.getElementById("QuizRules").style.display = "none";
   loadScore();
-  //for my starting screen that lets me see my high scores. If there are none stored in localStorage, it should be blank.
-  //Working from "start quiz" screen but not "highscores" screen.
 }
+
 //My function that submits my scores to my HighScore screen.
 function submitScore() {
   collectScore();
@@ -202,20 +226,19 @@ function clearScores() {
   localStorage.clear();
 }
 
-//My function to restart quiz.
-// function restartQuiz() {
-//   writeQuestion();
-//   startQuiz();
-// }
+// My function to restart quiz.
+function restartQuiz() {
+  location.reload();
+}
+
+document.getElementById("start").addEventListener("click", startQuiz);
 
 // Todo
 
 // Score
 // =====
 
-// might be easier to have on separate html
 // load previous scores from local storage
-// restart quiz
 
 // Remember to do
 // ===
@@ -223,7 +246,3 @@ function clearScores() {
 // get entries from localStorage using (getItem) and store it in a variable
 // update the variable (adding the new entry)
 // overwrite the old version of entries with your updated version
-
-// Bugs
-// ===
-// my "back" button doesn't clear the "HighScores" div. Also, the buttons no longer work. And the timer is going -0. And... sometimes the "clear" button just doesn't work if I try to use it a seconnd time.
