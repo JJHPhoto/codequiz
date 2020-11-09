@@ -4,22 +4,6 @@ let score = 0;
 let currentQuestion = 0;
 let intervalId;
 
-// Try if I decide to order high scores.
-// var entryCount = localStorage.getItem("entryCount");
-// var topFive = [];
-// var scoreBoard = [];
-
-// if (entryCount == null) {
-//   localStorage.setItem("entryCount", 0);
-//   entryCount = localStorage.getItem("entryCount");
-// } else {
-//   console.log("try", localStorage.length);
-//   for (var i = 0; i < localStorage.length - 1; i++) {
-//     scoreBoard.push(localStorage.getItem(i));
-//   }
-// }
-// console.log(scoreBoard);
-
 // My questions in an object array.
 const data = [
   {
@@ -32,8 +16,8 @@ const data = [
   },
 
   {
-    title: "Why is Logan so smart?",
-    answer1: "Josh isn't",
+    title: "Is Apple a cult?",
+    answer1: "Only ",
     answer2: "Deal with the devil",
     answer3: "Chromebook",
     answer4: "All of the above",
@@ -50,7 +34,7 @@ const data = [
   },
 
   {
-    title: "Did George Lucas steal the plot of Star Wars from Dune?",
+    title: "What books did George Lucas steal the plot of Star Wars from?",
     answer1: "Lenova",
     answer2: "Mac",
     answer3: "Chromebook",
@@ -186,14 +170,6 @@ function collectScore() {
 
   //Saving to localStorage.
   localStorage.setItem("entry", JSON.stringify(entry));
-
-  // Try this to order scores
-  // ===
-  // localStorage.setItem(entryCount, JSON.stringify(entry));
-  // entryCount = parseInt(entryCount) + 1;
-  // console.log(typeof entryCount);
-  // localStorage.setItem("entryCount", entryCount);
-  // //Just overwriting scores.
 }
 
 // My function that loads the user's scores from local storage.
@@ -232,17 +208,3 @@ function restartQuiz() {
 }
 
 document.getElementById("start").addEventListener("click", startQuiz);
-
-// Todo
-
-// Score
-// =====
-
-// load previous scores from local storage
-
-// Remember to do
-// ===
-// switch from "entry" to "entries" after I get it working
-// get entries from localStorage using (getItem) and store it in a variable
-// update the variable (adding the new entry)
-// overwrite the old version of entries with your updated version
