@@ -16,8 +16,15 @@ Next I worked on being able to submit the user's initials and store their scores
 
 As I was working in local storage, I was detecting some bugs that I knew I would need to fix. However, I wanted to get to the end of the line to see where that was so that I knew I could get there.
 
+Those bugs proved to be quite difficult to figure out. I got a working page to store my scores but because my key and values were the same, the scores would write over the previous score in local storage. With the help of my tutor, I was able to get local storage to add scores and not just overwrite them. I decided to remove that code because it would require a lot more work. I may revisit this assignment to see if I can get it to work.
+
 ### Resources
 
 [W3Schools](https://www.w3schools.com/)
 
-### Screenshot of working application
+### Screenshots of working application
+
+![Image](./assets/images/finishedSS-1.jpg)
+![Image](./assets/images/finishedSS-2.jpg)
+![Image](./assets/images/finishedSS-3.jpg)
+![Image](./assets/images/finishedSS-4.jpg)
