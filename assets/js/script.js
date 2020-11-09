@@ -1,5 +1,5 @@
 // My data
-let time = 50;
+let time = 90;
 let score = 0;
 let currentQuestion = 0;
 let intervalId;
@@ -17,74 +17,66 @@ const data = [
 
   {
     title: "Is Apple a cult?",
-    answer1: "Only ",
-    answer2: "Deal with the devil",
-    answer3: "Chromebook",
+    answer1: "Only to the uninitiated",
+    answer2: "Not according to our lord and savior: Steve Jobs",
+    answer3: "Depends on your definition of a cult",
     answer4: "All of the above",
-    correctAnswer: 1,
+    correctAnswer: 4,
   },
 
   {
-    title: "Why does Nikon suck?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
+    title: "What's the best camear?",
+    answer1: "Nikon",
+    answer2: "Sony",
+    answer3: "Canon",
+    answer4: "Fujifilm",
     correctAnswer: 3,
   },
 
   {
-    title: "What books did George Lucas steal the plot of Star Wars from?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
+    title: "Which authors did George Lucas steal from for the Star Wars story?",
+    answer1: "Frank Herbert",
+    answer2: "Isaac Asimov",
+    answer3: "Dale Pollock",
+    answer4: "All of the Above",
     correctAnswer: 4,
   },
 
   {
     title: "Is Google really evil?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
+    answer1: "Companies don't have feelings",
+    answer2: "Oboviously not in the strictest sense of the word",
+    answer3:
+      "Only if trying to track your every movement can be considered evil",
+    answer4: "Ask Apple",
     correctAnswer: 2,
   },
 
   {
     title: "Why do we take selfies?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
+    answer1: "To annoy Josh Haller",
+    answer2: "Fun",
+    answer3: "No friends to take photos with",
+    answer4: "Kim Kardashian",
     correctAnswer: 1,
   },
 
   {
-    title: "Is Apple a cult?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
-    correctAnswer: 3,
-  },
-
-  {
     title: "Is Mark Z a human?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
+    answer1: "Ask Faust",
+    answer2: "Only in the strictest sense of the word",
+    answer3: "What is a human?",
+    answer4: "Only if it helps him sell more of your data. Ads! I mean ads!",
     correctAnswer: 2,
   },
 
   {
     title: "How much more money does Jeff B need?",
-    answer1: "Lenova",
-    answer2: "Mac",
-    answer3: "Chromebook",
-    answer4: "Dell",
-    correctAnswer: 4,
+    answer1: "At least more than Zuch",
+    answer2: "Another billion",
+    answer3: "Enough to get those pictures deleted",
+    answer4: "None of the above",
+    correctAnswer: 1,
   },
 
   {
