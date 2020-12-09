@@ -1,5 +1,7 @@
 # Quiz
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 This week's homework assignment was to create a quiz with a timer that added time if the answer was correct and reduced time if the answer was wrong. We also needed to have a page that kept high scores from previous attempts at the quiz. This would be done using local storage but also need to be able to be cleared if the user wanted to.
 
 ### 1. Process
